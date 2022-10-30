@@ -26,7 +26,7 @@ app.use("/api/admin", adminRouter);
 app.use("/*", handleNotFound);
 
 app.use(errorHandler);
-
-app.listen(8000, () => {
-  console.log("the port is listening on port 8000");
+const port =process.env.PORT || 5000
+app.listen(port, () => {
+  console.log("the port is listening on port 5000");
 });
